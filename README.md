@@ -7,3 +7,15 @@ This contains Solution to d1g1t Assessment
 * Get director name for each movies (use the builtin method - get_movie())
 * Collect only the movie names and director names(in ascending order by director names)
 * Pretty-print the data in json and store in a json file
+
+### Required Python Packages
+* imdb
+* json
+* os
+* pprint
+
+### Solution
+* Run the file ***api_test.py***.
+* The script prints the Movie Name and Director Name of the Bottom 100 movies on the console, sorted by the Director Name.
+* It creates a file ***output.json*** with all the data. 
+* For handling movies with multiple directors, it appends the name separated by "**/**"
