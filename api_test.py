@@ -7,7 +7,6 @@
 # 5. Pretty-print the data in json and store in a json file
 ############################################################################################
 
-
 # Importing  Dependencies
 import json, os
 import pprint
@@ -24,14 +23,14 @@ cntr = 0
 
 # Traversing through each movie in the List
 for movie in bottom_movies:
-    cntr +=1
-    print ("Getting Data for Movie " + str(cntr))
+    cntr += 1
+    print("Getting Data for Movie " + str(cntr))
     temp_dir = {}
     dir_str = ""
     res = ia.get_movie(movie.movieID)
     for i in res['director']:
         # Appending  Director names in case Movie has multiple directors
-        dir_str = dir_str + str(i)  + " / "
+        dir_str = dir_str + str(i) + " / "
     dir_str = dir_str.rstrip(" / ")
 
     # Creating a Temp Directory  with Name of Movie and Director name and then append that to List
@@ -40,7 +39,7 @@ for movie in bottom_movies:
     final_data_list.append(temp_dir)
 
 # Sort the Final Data List based on Key 'director'
-sorted_final = sorted(final_data_list, key= lambda i: i['director'])
+sorted_final = sorted(final_data_list, key=lambda j: j['director'])
 
 # Check and Delete Output File, if already exists
 if os.path.isfile("output.json"):
@@ -48,10 +47,7 @@ if os.path.isfile("output.json"):
 
 # Create a JSON File from the Data List
 with open('output.json', 'w') as fout:
-    json.dump(sorted_final , fout)
+    json.dump(sorted_final, fout)
 
 # Pretty Print the Data on the Console
 pprint.pprint(sorted_final)
-
-
-
