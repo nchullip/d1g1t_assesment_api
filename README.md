@@ -1,5 +1,5 @@
 # d1g1t_assesment_api
-This contains Solution to d1g1t Assessment
+Solution to d1g1t Assessment on API
 
 ### Problem Statement
 * Use the IMDbPY (https://imdbpy.readthedocs.io/en/latest/index.html) package to get movie data from IMDB database.
